@@ -47,10 +47,4 @@ This project is a Streamlit-based app for parsing PDFs using a hybrid approach:
 - `outputs/` — Output files and assets
 - `prompts/` — LLM prompt templates
 
-## Troubleshooting
-- If you see errors about missing modules, ensure you installed all dependencies in the correct Python environment.
-- For OCR errors, ensure EasyOCR is installed and working. Tesseract is not required unless you use Tesseract-based OCR.
-- For Camelot errors, ensure `opencv-contrib-python` is installed.
 
-## License
-MIT

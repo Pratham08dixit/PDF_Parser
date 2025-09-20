@@ -4,7 +4,7 @@ This project is a Streamlit-based app for parsing PDFs using a hybrid approach:
 - **Rule-based extraction**: Extracts text, tables, and images using pdfplumber, camelot, and PyMuPDF.
 - **OCR for scanned PDFs**: Uses EasyOCR to extract text from scanned pages.
 - **Chart/Table extraction from images**: Uses img2table to extract tables and chart-like data from images.
-- **LLM fallback**: Optionally uses Gemini/OpenAI to structure output as hierarchical JSON if rule-based extraction is incomplete.
+- **LLM fallback**: Optionally uses Gemini to structure output as hierarchical JSON if rule-based extraction is incomplete.
 
 ## Features
 - Automatic detection of scanned PDFs and use of OCR.

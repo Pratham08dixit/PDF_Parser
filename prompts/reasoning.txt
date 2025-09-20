@@ -1,0 +1,28 @@
+Follow these steps internally before producing the final JSON:
+
+1. Identify structure:
+   - Scan page text for headings → treat as `section` or `sub_section`.
+   - If no clear headings → set section/sub_section to null.
+
+2. Classify each block:
+   - Long continuous text → type=paragraph.
+   - Tabular text (CSV-like or grid) → type=table.
+   - Images extracted (with file path) → type=image.
+   - Graphs/charts mentioned in metadata or OCR → type=chart.
+
+3. Populate fields:
+   - For paragraphs → put clean readable text in `text`.
+   - For tables → put rows in `table_data`.
+   - For charts → if structured data is available, fill `chart_data`; otherwise, short description.
+   - For images → always include `image_path` and optional `description`.
+
+4. Language handling:
+   - If text is not English, keep it in original language (do not translate).
+   - Section/sub_section names should reflect the document language.
+
+5. Validation:
+   - Ensure JSON syntax is correct.
+   - Ensure no extra commentary, no markdown, no “Here is your JSON” phrases.
+   - If uncertain, set missing fields to null.
+
+Only after following these steps, output the final JSON.

@@ -1,0 +1,17 @@
+streamlit
+pdfplumber
+PyMuPDF        # pip name: pymupdf
+camelot-py[cv] # may need opencv/system deps
+pytesseract
+pdf2image
+pandas
+numpy
+easyocr
+langdetect
+python-magic
+python-magic-bin; platform_system=="Windows"
+reportlab
+requests
+# Optionally:
+openai  # if you want to use OpenAI API; replace with your Gemini client lib
+img2table
